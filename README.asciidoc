@@ -42,9 +42,9 @@ HTML:
 
 [source,html]
 ----
-    <pre class="language-javascript line-numbers" data-start="5"><code>use "strict";
+<pre class="language-javascript line-numbers" data-start="5"><code>use "strict";
 
-    console.log("Hello, world!\n");</code></pre>
+console.log("Hello, world!\n");</code></pre>
 ----
 
 All positional arguments (those without an equals sign) to the filter are accumulated
@@ -58,11 +58,14 @@ discarded.
 https://metacpan.org/release/Text-Markdown-Hoedown|Text::Markup::Hoedown as your
 markdown processor, you can alternatively use fenced codeblocks:
 
-    ```javascript
-    use "strict";
+[source,markdown]
+----
+```javascript
+use "strict";
 
-    console.log("Hello, world!\n");
-    ```
+console.log("Hello, world!\n");
+```
+----
 
 This will result in the same HTML code but only with a class attribute of
 "language-javascript". If you need additional classes or attributes, you have to
@@ -111,9 +114,11 @@ http://www.qgoda.net/[Qgoda].
 You can also install the plug-in directly from git.
 
 [source,bash]
+----
 $ cd /path/to/your/qgoda/project
 $ test -e _plugins || mkdir _plugins
 $ git clone https://github.com/gflohr/qgoda-plugin-tt2-highlight
+----
 
 This will download the latest version into the directory `_plugins` where
 it will be recognized as a plug-in, the next time you start
