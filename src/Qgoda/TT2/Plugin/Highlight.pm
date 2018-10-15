@@ -49,53 +49,8 @@ sub filter {
 
 =head1  NAME
 
-Qgoda::TT2::Plugin::Highlight - Syntax highlighting
-
-=head1 SYNOPSIS
-
-    [% USE Highlight %]
-    ...
-    [% Filter $Highlight "language-javascript" "line-numbers" "data-start"=5 %]
-    use "strict";
-
-    console.log("Hello, world!\n");
-    [% END %]
+Qgoda::TT2::Plugin::Highlight - Syntax highlighting for Qgoda
 
 =head1 DESCRIPTION
 
-This L<Qgoda|http://www.qgoda.net/> plug-in for the 
-L<Template Toolkit|http://www.template-toolkit.org/> allows you to create code blocks
-that can be syntax-highlighted in the browser.  It works perfectly with
-L<PrismJS|https://prismjs.com/> but other libraries that follow the recommendation for
-code blocks in HTML are equally supported.
-
-The filter wraps its content into an HTML "code" element that in turn is wrapped into
-an HTML "pre".  The above example from the synopsis would result in the following
-HTML:
-
-    <pre class="language-javascript line-numbers" data-start="5"><code>use "strict";
-
-    console.log("Hello, world!\n");</code></pre>
-
-All positional arguments (those without an equals sign) to the filter are accumulated
-in the class attribute of the "pre" element. All named arguments (those with an equals
-sign) are converted into other attributes.
-
-Leading and trailing whitespace around the source snippet is discaded.
-
-B<Important!> If you are using L<Text::Markup::Hoedown> as your markdown processor,
-you can alternatively use fenced codeblocks:
-
-    ```javascript
-    use "strict";
-
-    console.log("Hello, world!\n");
-    ```
-
-This will result in the same HTML code but only with a class attribute of
-"language-javascript". If you need additional classes or attributes, you have to
-use this filter.
-
-B<Important!> It is your responsability to add all the required JavaScript and
-CSS to the page that is needed for syntax highlighting.  See 
-L<https://prismjs.com/> for an example, how to include the required assets.
+See L<https://github.com/gflohr/qgoda-plugin-tt2-highlight>!
