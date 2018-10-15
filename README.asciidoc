@@ -103,6 +103,22 @@ $ yarn add gflohr/qgoda-plugin-tt2-highlight
 $ npm upgrade gflohr/qgoda-plugin-tt2-hightlight
 ----
 
+Either way, it will be recognized as a plug-in, the next time you start
+http://www.qgoda.net/[Qgoda].
+
+=== From Version Control
+
+You can also install the plug-in directly from git.
+
+[source,bash]
+$ cd /path/to/your/qgoda/project
+$ test -e _plugins || mkdir _plugins
+$ git clone https://github.com/gflohr/qgoda-plugin-tt2-highlight
+
+This will download the latest version into the directory `_plugins` where
+it will be recognized as a plug-in, the next time you start
+http://www.qgoda.net/[Qgoda].
+
 == Copyright
 
 Copyright (C) 2018 Guido Flohr guido.flohr@cantanea.com, all rights
