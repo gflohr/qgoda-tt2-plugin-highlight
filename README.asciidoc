@@ -1,0 +1,115 @@
+:idprefix:
+:idseparator: -
+:sectanchors:
+:sectlinks:
+:sectnumlevels: 4
+:sectnums:
+:toc: macro
+:toclevels: 4
+:toc-title: 
+
+[[qgoda-plugin-tt2-highlight]]
+= Qgoda-Plugin-TT2-Highlight
+
+Syntax highlighting for http://www.qgoda.net/[Qgoda].
+
+toc::[]
+
+== Synopsis
+
+[source,tt2]
+----
+[% USE Highlight %]
+...
+[% Filter $Highlight "language-javascript" "line-numbers" "data-start"=5 %]
+use "strict";
+
+console.log("Hello, world!\n");
+[% END %]
+----
+
+== Description
+
+This L<Qgoda|http://www.qgoda.net/> plug-in for the
+L<Template Toolkit|http://www.template-toolkit.org/> allows you to create code blocks
+that can be syntax-highlighted in the browser.  It works perfectly with
+L<PrismJS|https://prismjs.com/> but other libraries that follow the recommendation for
+code blocks in HTML are equally supported.
+
+The filter wraps its content into an HTML "code" element that in turn is wrapped into
+an HTML "pre".  The above example from the synopsis would result in the following
+HTML:
+
+[source,html]
+----
+    <pre class="language-javascript line-numbers" data-start="5"><code>use "strict";
+
+    console.log("Hello, world!\n");</code></pre>
+----
+
+All positional arguments (those without an equals sign) to the filter are accumulated
+in the class attribute of the "pre" element. All named arguments (those with an equals
+sign) are converted into other attributes.
+
+Leading and trailing whitespace around the source snippet is stripped off and
+discarded.
+
+*Important!* If you are using
+https://metacpan.org/release/Text-Markdown-Hoedown|Text::Markup::Hoedown as your
+markdown processor, you can alternatively use fenced codeblocks:
+
+    ```javascript
+    use "strict";
+
+    console.log("Hello, world!\n");
+    ```
+
+This will result in the same HTML code but only with a class attribute of
+"language-javascript". If you need additional classes or attributes, you have to
+use this filter.
+
+*Important!* It is your responsability to add all the required JavaScript and
+CSS to the page that is needed for syntax highlighting.  See
+https://prismjs.com/ for an example, how to include the required assets.
+
+== Installation and Update
+
+No. Like most qgoda plug-ins, this module is not available on CPAN.
+
+=== With Node.JS Package Manager
+
+Check that your Qgoda project directory contains a file `package.json`.  If
+not, create one with either `npm init` or `yarn init`.
+
+==== NPM
+
+With NPM, you install the plug-in and update it to the latest version like
+this:
+
+[source,bash]
+----
+$ npm install --save-dev gflohr/qgoda-plugin-tt2-highlight
+$ npm update gflohr/qgoda-plugin-tt2-hightlight
+----
+
+==== YARN
+
+With Yarn, you install the plug-in and update it to the latest version like
+this:
+
+[source,bash]
+----
+$ yarn add gflohr/qgoda-plugin-tt2-highlight
+$ npm upgrade gflohr/qgoda-plugin-tt2-hightlight
+----
+
+== Copyright
+
+Copyright (C) 2018 Guido Flohr guido.flohr@cantanea.com, all rights
+reserved.
+
+This library is free software. It comes without any warranty, to the
+extent permitted by applicable law. You can redistribute it and/or
+modify it under the terms of the Do What the Fuck You Want to Public
+License, Version 2, as published by Sam Hocevar. See
+http://www.wtfpl.net/ for more details.
