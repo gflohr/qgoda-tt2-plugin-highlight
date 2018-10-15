@@ -30,10 +30,10 @@ console.log("Hello, world!\n");
 
 == Description
 
-This L<Qgoda|http://www.qgoda.net/> plug-in for the
-L<Template Toolkit|http://www.template-toolkit.org/> allows you to create code blocks
+This http://www.qgoda.net/[Qgoda] plug-in for the
+http://www.template-toolkit.org/[Template Toolkit] allows you to create code blocks
 that can be syntax-highlighted in the browser.  It works perfectly with
-L<PrismJS|https://prismjs.com/> but other libraries that follow the recommendation for
+https://prismjs.com/[PrismJS] but other libraries that follow the recommendation for
 code blocks in HTML are equally supported.
 
 The filter wraps its content into an HTML "code" element that in turn is wrapped into
