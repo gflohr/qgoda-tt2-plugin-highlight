@@ -1,24 +1,10 @@
-:idprefix:
-:idseparator: -
-:sectanchors:
-:sectlinks:
-:sectnumlevels: 4
-:sectnums:
-:toc: macro
-:toclevels: 4
-:toc-title: 
+# Qgoda-Plugin-TT2-Highlight
 
-[[qgoda-plugin-tt2-highlight]]
-= Qgoda-Plugin-TT2-Highlight
+This plug-in provides syntax highlighting for [Qgoda](http://www.qgoda.net/).
 
-Syntax highlighting for http://www.qgoda.net/[Qgoda].
+## SYNOPSIS
 
-toc::[]
-
-== Synopsis
-
-[source,tt2]
-----
+```tt2
 [% USE Highlight %]
 ...
 [% Filter $Highlight "language-javascript" "line-numbers" "data-start"=5 %]
@@ -26,26 +12,25 @@ use "strict";
 
 console.log("Hello, world!\n");
 [% END %]
-----
+```
 
-== Description
+## DESCRIPTION
 
-This http://www.qgoda.net/[Qgoda] plug-in for the
-http://www.template-toolkit.org/[Template Toolkit] allows you to create code blocks
-that can be syntax-highlighted in the browser.  It works perfectly with
-https://prismjs.com/[PrismJS] but other libraries that follow the recommendation for
-code blocks in HTML are equally supported.
+This [Qgoda](http://www.qgoda.net/) plug-in for the
+[Template Toolkit](http://www.template-toolkit.org/) allows you to create 
+code blocks that can be syntax-highlighted in the browser.  It works perfectly
+with [PrismJS](https://prismjs.com/) but other libraries that follow the
+recommendation for code blocks in HTML are equally supported.
 
 The filter wraps its content into an HTML "code" element that in turn is wrapped into
 an HTML "pre".  The above example from the synopsis would result in the following
 HTML:
 
-[source,html]
-----
+```html
 <pre class="language-javascript line-numbers" data-start="5"><code>use "strict";
 
 console.log("Hello, world!\n");</code></pre>
-----
+```
 
 All positional arguments (those without an equals sign) to the filter are accumulated
 in the class attribute of the "pre" element. All named arguments (those with an equals
@@ -55,17 +40,15 @@ Leading and trailing whitespace around the source snippet is stripped off and
 discarded.
 
 *Important!* If you are using
-https://metacpan.org/release/Text-Markdown-Hoedown|Text::Markup::Hoedown as your
-markdown processor, you can alternatively use fenced codeblocks:
+[Text::Marup::Hoedown](https://metacpan.org/release/Text-Markdown-Hoedown)as your markdown processor, you can alternatively use fenced codeblocks:
 
-[source,markdown]
-----
-```javascript
+```markdown
+#x60;#x60;#x60;javascript
 use "strict";
 
 console.log("Hello, world!\n");
+#x60;#x60;#x60;
 ```
-----
 
 This will result in the same HTML code but only with a class attribute of
 "language-javascript". If you need additional classes or attributes, you have to
@@ -75,56 +58,54 @@ use this filter.
 CSS to the page that is needed for syntax highlighting.  See
 https://prismjs.com/ for an example, how to include the required assets.
 
-== Installation and Update
+## Installation and Update
 
-No. Like most qgoda plug-ins, this module is not available on CPAN.
+Like all Qgoda plug-ins, there is no need to install
+from CPAN (although you can).
 
-=== With Node.JS Package Manager
+### With Node.JS Package Manager
 
 Check that your Qgoda project directory contains a file `package.json`.  If
 not, create one with either `npm init` or `yarn init`.
 
-==== NPM
+#### NPM
 
 With NPM, you install the plug-in and update it to the latest version like
 this:
 
-[source,bash]
-----
+```bash
 $ npm install --save-dev gflohr/qgoda-plugin-tt2-highlight
 $ npm update gflohr/qgoda-plugin-tt2-hightlight
-----
+```
 
-==== YARN
+#### YARN
 
 With Yarn, you install the plug-in and update it to the latest version like
 this:
 
-[source,bash]
-----
+```bash
 $ yarn add gflohr/qgoda-plugin-tt2-highlight
 $ npm upgrade gflohr/qgoda-plugin-tt2-hightlight
-----
+```
 
 Either way, it will be recognized as a plug-in, the next time you start
-http://www.qgoda.net/[Qgoda].
+[Qgoda](http://www.qgoda.net/).
 
-=== From Version Control
+#### From Version Control
 
 You can also install the plug-in directly from git.
 
-[source,bash]
-----
+```bash
 $ cd /path/to/your/qgoda/project
 $ test -e _plugins || mkdir _plugins
 $ git clone https://github.com/gflohr/qgoda-plugin-tt2-highlight
-----
+```
 
 This will download the latest version into the directory `_plugins` where
 it will be recognized as a plug-in, the next time you start
-http://www.qgoda.net/[Qgoda].
+[Qgoda](http://www.qgoda.net/).
 
-== Copyright
+## Copyright
 
 Copyright (C) 2018 Guido Flohr guido.flohr@cantanea.com, all rights
 reserved.

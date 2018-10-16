@@ -14,6 +14,8 @@ use strict;
 
 use base qw(Template::Plugin::Filter);
 
+use Qgoda '0.9.2';
+
 use Qgoda::Util qw(trim html_escape);
 
 sub init {
