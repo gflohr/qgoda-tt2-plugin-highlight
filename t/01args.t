@@ -23,7 +23,6 @@ my $template = <<'EOF';
 print "Hello, world!\n";
 [% END %]
 EOF
-
 my $got = $processor->process($template, {}, 'in-memory');
 
 my $expected = <<'EOF';
@@ -32,5 +31,25 @@ EOF
 
 is $got, $expected;
 
- 
+$template = <<'EOF';
+[%- USE Highlight "class1 class2" more="there" -%]
+[%- FILTER $Highlight "language-perl" other="foo" %]
+print "Hello, world!\n";
+[% END %]
+EOF
+$got = $processor->process($template, {}, 'in-memory');
+$expected = <<'EOF';
+<pre class="class1 class2 language-perl" data-start="5" more="there"><code>print "Hello, world!\n";</code></pre>
+EOF
+
+$template = <<'EOF';
+[%- USE Highlight "class1 class2" more="there" -%]
+[%- FILTER $Highlight "language-perl" "-class2" more="here" %]
+print "Hello, world!\n";
+[% END %]
+EOF
+$got = $processor->process($template, {}, 'in-memory');
+$expected = <<'EOF';
+<pre class="class1 language-perl" data-start="5" more="here"><code>print "Hello, world!\n";</code></pre>
+EOF
 done_testing;
