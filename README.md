@@ -91,7 +91,7 @@ $ npm upgrade gflohr/qgoda-plugin-tt2-hightlight
 Either way, it will be recognized as a plug-in, the next time you start
 [Qgoda](http://www.qgoda.net/).
 
-#### From Version Control
+### From Version Control
 
 You can also install the plug-in directly from git.
 
@@ -104,6 +104,24 @@ $ git clone https://github.com/gflohr/qgoda-plugin-tt2-highlight
 This will download the latest version into the directory `_plugins` where
 it will be recognized as a plug-in, the next time you start
 [Qgoda](http://www.qgoda.net/).
+
+### From CPAN
+
+You can also install from CPAN, if you can't help.  One of the following two options should work:
+
+#### cpanm
+
+```bash
+$ sudp cpanm Qgoda::Plugin::TT2::Highlight
+```
+
+The command `cpanm` comes with [App-cpanminus](https://metacpan.org/release/App-cpanminus).
+
+#### cpan
+
+```bash
+$ sudo cpan install Qgoda::Plugin::TT2::Highlight
+```
 
 ## Copyright
 
