@@ -18,10 +18,10 @@ my %module_build_args = (
   "dist_author" => [
     "Guido Flohr <guido.flohr\@cantanea.com>"
   ],
-  "dist_name" => "Qgoda-Plugin-TT2-Highlight",
+  "dist_name" => "Qgoda-TT2-Plugin-Highlight",
   "dist_version" => "v0.1.2",
   "license" => "unrestricted",
-  "module_name" => "Qgoda::Plugin::TT2::Highlight",
+  "module_name" => "Qgoda::TT2::Plugin::Highlight",
   "recursive_test_files" => 1
 );
 

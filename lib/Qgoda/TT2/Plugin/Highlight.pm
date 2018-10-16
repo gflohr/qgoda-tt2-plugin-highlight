@@ -42,7 +42,7 @@ sub filter {
         $html .= qq{ $attr="$value"};
     }
 
-    $html .= "><code>$src</pre></code>";
+    $html .= "><code>$src</code></pre>";
 
     return $html;
 }
@@ -55,4 +55,4 @@ Qgoda::TT2::Plugin::Highlight - Syntax highlighting for Qgoda
 
 =head1 DESCRIPTION
 
-See L<https://github.com/gflohr/qgoda-plugin-tt2-highlight>!
+See L<https://github.com/gflohr/qgoda-tt2-plugin-highlight>!

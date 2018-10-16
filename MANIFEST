@@ -8,10 +8,12 @@ META.yml
 Makefile.PL
 README.md
 README.pod
+dist.ini
 index.pl
 lib/Qgoda/TT2/Plugin/Highlight.pm
 package.json
+perlcritic.rc
+t/00basic.t
 t/author-critic.t
-t/author-pod-coverage.t
 t/author-pod-syntax.t
 t/release-cpan-changes.t

@@ -1,19 +1,29 @@
 {
-  "name": "qgoda-plugin-tt2-highlight",
-  "repository": "qgoda-plugin-tt2-highlight",
-  "version": "0.0.1",
-  "description": "Semantic syntax highlighting for Qgoda sites",
-  "main": "index.pl",
-  "keywords": [
-    "Qgoda",
-    "PrismJS",
-    "syntax highlighting"
-  ],
-  "author": "Guido Flohr <guido.flohr@cantanea.com> (http://www.guido.flohr.net/)",
-  "license": "WTFPL",
-  "qgoda": {
-    "language": "Perl",
-    "type": "TT2::Filter",
-    "version": "0.9.2"
-  }
+   "name" : "qgoda-tt2-plugin-highlight",
+   "bugs" : "https://github.com/gflohr/qgoda-plugin-tt2-highlight/issues",
+   "repository" : {
+      "type" : "git",
+      "url" : "git://github.com/gflohr/qgoda-plugin-tt2-highlight"
+   },
+   "qgoda" : {
+      "language" : "Perl"
+   },
+   "keywords" : "",
+   "description" : "Syntax highlighting for Qgoda",
+   "scripts" : {
+      "test" : "make test"
+   },
+   "contributors" : [],
+   "main" : "index.pl",
+   "license" : "WTFPL_2",
+   "directories" : {
+      "lib" : "./lib",
+      "t" : "./t"
+   },
+   "homepage" : "http://www.qgoda.net/",
+   "author" : "Guido Flohr <guido.flohr@cantanea.com>",
+   "version" : "v0.1.2",
+   "peerDependencies" : {
+      "Qgoda" : "^0.9.0-alpha.1"
+   }
 }

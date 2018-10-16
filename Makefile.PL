@@ -16,9 +16,9 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => 0,
     "Module::Build" => "0.28"
   },
-  "DISTNAME" => "Qgoda-Plugin-TT2-Highlight",
+  "DISTNAME" => "Qgoda-TT2-Plugin-Highlight",
   "LICENSE" => "unrestricted",
-  "NAME" => "Qgoda::Plugin::TT2::Highlight",
+  "NAME" => "Qgoda::TT2::Plugin::Highlight",
   "PREREQ_PM" => {},
   "VERSION" => "v0.1.2",
   "test" => {
