@@ -16,7 +16,22 @@ use base qw(Template::Plugin::Filter);
 
 use Qgoda '0.9.2';
 
-use Qgoda::Util qw(trim html_escape);
+use Qgoda::Util qw(trim html_escape tt2_args_merge);
+
+sub new {
+    my ($class, $ctx, @args) = @_;
+
+    my $conf = {};
+    if (@args && ref $args[-1] && 'HASH' eq ref $args[-1]) {
+        $conf = pop @args;
+    }
+    my $self = $class->SUPER::new($ctx);
+
+    $self->{__args} = \@args;
+    $self->{__conf} = $conf;
+
+    return $self;
+}
 
 sub init {
     my ($self) = @_;
@@ -27,11 +42,13 @@ sub init {
 }
 
 sub filter {
-    my ($self, $src, $args, $conf) = @_;
+    my ($self, $src, $local_args, $local_conf) = @_;
 
     $src = trim $src;
     next if !length $src;
 
+    my ($args, $conf) = tt2_args_merge $self->{__args}, $self->{__conf},
+                                       $local_args, $local_conf;
     my $html = "<pre";
     if ($args && @$args) {
         my $class = join ' ', map { html_escape $_ } @$args;

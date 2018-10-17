@@ -28,28 +28,30 @@ my $got = $processor->process($template, {}, 'in-memory');
 my $expected = <<'EOF';
 <pre class="language-perl line-numbers" data-start="5"><code>print "Hello, world!\n";</code></pre>
 EOF
-
 is $got, $expected;
 
 $template = <<'EOF';
-[%- USE Highlight "class1 class2" more="there" -%]
+[%- USE Highlight "class1" "class2" more="there" -%]
 [%- FILTER $Highlight "language-perl" other="foo" %]
 print "Hello, world!\n";
 [% END %]
 EOF
 $got = $processor->process($template, {}, 'in-memory');
 $expected = <<'EOF';
-<pre class="class1 class2 language-perl" data-start="5" more="there"><code>print "Hello, world!\n";</code></pre>
+<pre class="class1 class2 language-perl" more="there" other="foo"><code>print "Hello, world!\n";</code></pre>
 EOF
+is $got, $expected;
 
 $template = <<'EOF';
-[%- USE Highlight "class1 class2" more="there" -%]
+[%- USE Highlight "class1" "class2" more="there" -%]
 [%- FILTER $Highlight "language-perl" "-class2" more="here" %]
 print "Hello, world!\n";
 [% END %]
 EOF
 $got = $processor->process($template, {}, 'in-memory');
 $expected = <<'EOF';
-<pre class="class1 language-perl" data-start="5" more="here"><code>print "Hello, world!\n";</code></pre>
+<pre class="class1 language-perl" more="here"><code>print "Hello, world!\n";</code></pre>
 EOF
+is $got, $expected;
+
 done_testing;
