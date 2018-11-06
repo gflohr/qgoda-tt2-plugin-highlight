@@ -46,7 +46,9 @@ sub filter {
 
     $src = trim $src;
     next if !length $src;
-
+    
+    $src = html_escape $src;
+    
     my ($args, $conf) = tt2_args_merge $self->{__args}, $self->{__conf},
                                        $local_args, $local_conf;
     my $html = "<pre";
