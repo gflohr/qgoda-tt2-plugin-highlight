@@ -1,4 +1,5 @@
 {{$NEXT}}
+        - html escape filter blocks
         - more standard package structure
         - allow global arguments
 
