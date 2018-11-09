@@ -14,6 +14,8 @@ console.log("Hello, world!\n");
 [% END %]
 ```
 
+You can also use this plug-in without Qgoda.
+
 ## DESCRIPTION
 
 This [Qgoda](http://www.qgoda.net/) plug-in for the
@@ -42,10 +44,11 @@ discarded.
 *Important!* If you are using
 [Text::Marup::Hoedown](https://metacpan.org/release/Text-Markdown-Hoedown)as your markdown processor, you can alternatively use fenced codeblocks:
 
-<pre class="language-markdown"><code>```;javascript
+<pre class="language-markdown"><code>```javascript
 use "strict";
 
-console.log("Hello, world!\n");```</code></pre>
+console.log("Hello, world!\n");
+```</code></pre>
 
 This will result in the same HTML code but only with a class attribute of
 "language-javascript". If you need additional classes or attributes, you have to
