@@ -1,4 +1,4 @@
-# Qgoda-Plugin-TT2-Highlight
+# Qgoda-TT2-Plugin-Highlight
 
 This plug-in provides syntax highlighting for [Qgoda](http://www.qgoda.net/).
 
@@ -42,13 +42,10 @@ discarded.
 *Important!* If you are using
 [Text::Marup::Hoedown](https://metacpan.org/release/Text-Markdown-Hoedown)as your markdown processor, you can alternatively use fenced codeblocks:
 
-```markdown
-#x60;#x60;#x60;javascript
+<pre class="language-markdown"><code>```;javascript
 use "strict";
 
-console.log("Hello, world!\n");
-#x60;#x60;#x60;
-```
+console.log("Hello, world!\n");```</code></pre>
 
 This will result in the same HTML code but only with a class attribute of
 "language-javascript". If you need additional classes or attributes, you have to
