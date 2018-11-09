@@ -42,7 +42,7 @@ Leading and trailing whitespace around the source snippet is stripped off and
 discarded.
 
 *Important!* If you are using
-[Text::Marup::Hoedown](https://metacpan.org/release/Text-Markdown-Hoedown)as your markdown processor, you can alternatively use fenced codeblocks:
+[Text::Markup::Hoedown](https://metacpan.org/release/Text-Markdown-Hoedown)as your markdown processor, you can alternatively use fenced codeblocks:
 
 <pre class="language-markdown"><code>```javascript
 use "strict";
