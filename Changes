@@ -1,4 +1,7 @@
 {{$NEXT}}
+        - fixed documentation
+
+0.1.1 - 2018-11-06
         - html escape filter blocks
         - more standard package structure
         - allow global arguments
