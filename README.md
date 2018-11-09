@@ -74,8 +74,8 @@ With NPM, you install the plug-in and update it to the latest version like
 this:
 
 ```bash
-$ npm install --save-dev gflohr/qgoda-plugin-tt2-highlight
-$ npm update gflohr/qgoda-plugin-tt2-hightlight
+$ npm install --save-dev gflohr/qgoda-tt2-plugin-highlight
+$ npm update gflohr/qgoda-tt2-plugin-hightlight
 ```
 
 #### YARN
@@ -84,7 +84,7 @@ With Yarn, you install the plug-in and update it to the latest version like
 this:
 
 ```bash
-$ yarn add gflohr/qgoda-plugin-tt2-highlight
+$ yarn add gflohr/qgoda-tt2-plugin-highlight
 $ npm upgrade gflohr/qgoda-plugin-tt2-hightlight
 ```
 
@@ -98,7 +98,7 @@ You can also install the plug-in directly from git.
 ```bash
 $ cd /path/to/your/qgoda/project
 $ test -e _plugins || mkdir _plugins
-$ git clone https://github.com/gflohr/qgoda-plugin-tt2-highlight
+$ git clone https://github.com/gflohr/qgoda-tt2-plugin-highlight
 ```
 
 This will download the latest version into the directory `_plugins` where
@@ -112,7 +112,7 @@ You can also install from CPAN, if you can't help.  One of the following two opt
 #### cpanm
 
 ```bash
-$ sudp cpanm Qgoda::Plugin::TT2::Highlight
+$ sudp cpanm Qgoda::TT2::Plugin::Highlight
 ```
 
 The command `cpanm` comes with [App-cpanminus](https://metacpan.org/release/App-cpanminus).
@@ -120,7 +120,7 @@ The command `cpanm` comes with [App-cpanminus](https://metacpan.org/release/App-
 #### cpan
 
 ```bash
-$ sudo cpan install Qgoda::Plugin::TT2::Highlight
+$ sudo cpan install Qgoda::TT2::Plugin::Highlight
 ```
 
 ## Copyright

@@ -7,7 +7,7 @@
    "license" : "WTFPL_2",
    "main" : "index.pl",
    "repository" : {
-      "url" : "git://github.com/gflohr/qgoda-plugin-tt2-highlight",
+      "url" : "git://github.com/gflohr/qgoda-tt2-plugin-highlight",
       "type" : "git"
    },
    "scripts" : {
@@ -15,7 +15,7 @@
    },
    "name" : "qgoda-tt2-plugin-highlight",
    "keywords" : "",
-   "bugs" : "https://github.com/gflohr/qgoda-plugin-tt2-highlight/issues",
+   "bugs" : "https://github.com/gflohr/qgoda-tt2-plugin-highlight/issues",
    "directories" : {
       "lib" : "./lib",
       "t" : "./t"
