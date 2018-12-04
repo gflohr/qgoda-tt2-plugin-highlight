@@ -112,7 +112,7 @@ You can also install from CPAN, if you can't help.  One of the following two opt
 #### cpanm
 
 ```bash
-$ sudp cpanm Qgoda::TT2::Plugin::Highlight
+$ sudo cpanm Qgoda::TT2::Plugin::Highlight
 ```
 
 The command `cpanm` comes with [App-cpanminus](https://metacpan.org/release/App-cpanminus).
